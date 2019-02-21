@@ -57,63 +57,18 @@ class UploadPage extends Component {
               </Grid>
               <hr />
               {/* array map till here */}
-              {/* array map from here */}
-              <Grid container>
-                <Grid item md={1} />
-                <Grid item md={8}>
-                  <List>
-                    <ListItem>
-                      <ListItemText>Class X Marksheet</ListItemText>
-                    </ListItem>
-                  </List>
-                </Grid>
-                <Grid item md={1}>
-                  <Button style={{ marginTop: "20px" }}>View</Button>
-                </Grid>
-                <Grid item md={1}>
-                  <Button style={{ marginTop: "20px" }}>Upload</Button>
-                </Grid>
-              </Grid>
-              <hr />
-              {/* array map till here */}
-              {/* array map from here */}
-              <Grid container>
-                <Grid item md={1} />
-                <Grid item md={8}>
-                  <List>
-                    <ListItem>
-                      <ListItemText>Class X Marksheet</ListItemText>
-                    </ListItem>
-                  </List>
-                </Grid>
-                <Grid item md={1}>
-                  <Button style={{ marginTop: "20px" }}>View</Button>
-                </Grid>
-                <Grid item md={1}>
-                  <Button style={{ marginTop: "20px" }}>Upload</Button>
-                </Grid>
-              </Grid>
-              <hr />
-              {/* array map till here */}
-              {/* array map from here */}
-              <Grid container>
-                <Grid item md={1} />
-                <Grid item md={8}>
-                  <List>
-                    <ListItem>
-                      <ListItemText>Class X Marksheet</ListItemText>
-                    </ListItem>
-                  </List>
-                </Grid>
-                <Grid item md={1}>
-                  <Button style={{ marginTop: "20px" }}>View</Button>
-                </Grid>
-                <Grid item md={1}>
-                  <Button style={{ marginTop: "20px" }}>Upload</Button>
-                </Grid>
-              </Grid>
-              <hr />
-              {/* array map till here */}
+              <Button
+                variant="outlined"
+                color="primary"
+                style={{
+                  height: "50px",
+                  width: "100px",
+                  marginBottom: "15px",
+                  marginLeft: "300px"
+                }}
+              >
+                Next
+              </Button>
             </Card>
           </Grid>
         </Grid>
