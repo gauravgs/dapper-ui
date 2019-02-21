@@ -1,5 +1,7 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+#### Added new Modules for React Router using Breadcrumbs (this may help the linkers)
+
 ## Available Scripts
 
 In the project directory, you can run:
@@ -66,7 +68,6 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `npm run build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
-# dapper-ui
 
 # dapper-ui
 
@@ -74,4 +75,4 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/tr
 
 # dapper-ui
 
-gsgr8
+# dapper-ui

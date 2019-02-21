@@ -19,6 +19,7 @@ import DrawerRHS from "./Trials/DrawerRHS";
 import SimpleTabs from "./Trials/SimpleTabs";
 import SignUpButton from "./Trials/SignUpButton";
 import UploadPage from "./Trials/UploadPage";
+import LHS from "./Trials/LHS";
 
 class App extends Component {
   constructor(props) {
@@ -26,11 +27,7 @@ class App extends Component {
     this.state = {};
   }
   render() {
-    return (
-      <div className="App">
-        <UploadPage />
-      </div>
-    );
+    return <div className="App" />;
   }
 }
 
