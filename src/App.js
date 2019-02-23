@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import ClippedDrawer from "./Trials/ClippedDrawer";
+import DashboardC from "./Trials/DashboardC";
 
 class App extends Component {
   constructor(props) {
@@ -9,7 +10,8 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <ClippedDrawer />
+        {/* <ClippedDrawer /> */}
+        <DashboardC />
       </div>
     );
   }
