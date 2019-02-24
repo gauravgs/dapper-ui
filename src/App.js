@@ -11,6 +11,10 @@ import MyRequests from "./Trials/MyRequests";
 import InstDashboard from "./Trials/InstDashboard";
 import DrawerRHS from "./Trials/DrawerRHS";
 import SearchResults from "./Trials/SearchResults";
+import LandingPage from "./Trials/LandingPage";
+import ViewProfile from "./Trials/ViewProfile";
+import HoverPop from "./Trials/HoverPop";
+import TransferOwnership from "./Trials/TransferOwnership";
 
 class App extends Component {
   constructor(props) {
@@ -31,8 +35,13 @@ class App extends Component {
         {/* <DrawerRHS /> */}
         {/* <TopNav /> */}
         {/* <Sample /> */}
-        <SearchResults />
+        {/* <SearchResults /> */}
         {/* <RequestCard /> */}
+        {/* <LandingPage /> */}
+        {/* <ViewProfile /> */}
+        {/* <HoverPop /> */}
+        {/* <MyDocuments /> */}
+        <TransferOwnership />
       </div>
     );
   }

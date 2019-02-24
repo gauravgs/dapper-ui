@@ -88,6 +88,15 @@ class MyDocuments extends Component {
                   </ExpansionPanelDetails>
                 </ExpansionPanel>
                 {/* array map the above content  */}
+                <Grid container justify="center">
+                  <Button
+                    variant="outlined"
+                    color="secondary"
+                    style={{ marginTop: "15px", marginBottom: "15px" }}
+                  >
+                    Add New Document
+                  </Button>
+                </Grid>
               </Grid>
             </Card>
           </Grid>
