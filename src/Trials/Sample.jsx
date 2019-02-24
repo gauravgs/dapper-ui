@@ -1,28 +1,41 @@
 import React, { Component } from "react";
 import Button from "@material-ui/core/Button";
+import Grid from "@material-ui/core/Grid";
 
 class Sample extends Component {
   constructor() {
     super();
-    this.state = {};
+  }
+  state = {
+    id: 1
+  };
+
+  renderMe() {
+    this.setState({
+      id: 0
+    });
   }
   render() {
     return (
       <div>
-        <h1>e-certify</h1>
-        <Button>Hello Button!</Button>
-        <br />
-        <Button variant="outlined">Default</Button>
-        <Button variant="outlined" style={{ color: "#009688" }}>
-          Primary
-        </Button>
-        <Button variant="outlined" color="secondary">
-          Secondary
-        </Button>
-        <Button variant="outlined" disabled>
-          Disabled
-        </Button>
-        <span style={{ color: "#009688" }}>Hello Color Teal!!</span>
+        <Grid container>
+          <Grid item md={3}>
+            <h1>e-certify</h1>
+            <Button
+              variant="outlined"
+              color="secondary"
+              onClick={this.renderMe.bind(this)}
+            >
+              Click
+            </Button>
+          </Grid>
+          <Grid item md={6}>
+            {this.state.id ? <div>hi</div> : <div />}
+          </Grid>
+          <Grid item md={3}>
+            Hello
+          </Grid>
+        </Grid>
       </div>
     );
   }

@@ -120,7 +120,7 @@ class MyProfile extends Component {
                       color: "#E10050"
                     }}
                   >
-                    My Requests
+                    Transfer of Ownership Requests
                     <Typography variant="caption" style={{ marginLeft: "5px" }}>
                       (Click on the Request to view.)
                     </Typography>

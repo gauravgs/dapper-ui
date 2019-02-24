@@ -1,58 +1,92 @@
-import React, { Component } from "react";
+import React from "react";
 import PropTypes from "prop-types";
+import { withStyles } from "@material-ui/core/styles";
 import Drawer from "@material-ui/core/Drawer";
-import CssBaseline from "@material-ui/core/CssBaseline";
-import AppBar from "@material-ui/core/AppBar";
-import Toolbar from "@material-ui/core/Toolbar";
+import Button from "@material-ui/core/Button";
 import List from "@material-ui/core/List";
-import Typography from "@material-ui/core/Typography";
 import Divider from "@material-ui/core/Divider";
 import ListItem from "@material-ui/core/ListItem";
 import ListItemIcon from "@material-ui/core/ListItemIcon";
 import ListItemText from "@material-ui/core/ListItemText";
 import InboxIcon from "@material-ui/icons/MoveToInbox";
 import MailIcon from "@material-ui/icons/Mail";
-import { Button, ButtonBase } from "@material-ui/core";
-import FullScreenDialog from "./FullScreenDialog";
+import { Typography } from "@material-ui/core";
 
-class DrawerRHS extends Component {
-  constructor(props) {
-    super(props);
+const styles = {
+  list: {
+    width: 250
   }
+};
+
+class DrawerRHS extends React.Component {
   state = {
-    a: "not ok"
+    right: false
   };
-  act() {
+
+  toggleDrawer = (side, open) => () => {
     this.setState({
-      a: "ok"
+      [side]: open
     });
-  }
+  };
+
   render() {
-    return (
-      <div>
-        <Drawer variant="permanent" anchor="right" style={{ width: "660px" }}>
-          <div />
-          <Typography variant="h4" color="primary" style={{ margin: "10px" }}>
-            Linked Accounts
-          </Typography>
+    const { classes } = this.props;
+
+    const sideList = (
+      <div className={classes.list}>
+        <List>
+          <ListItem>
+            <ListItemText>
+              <Typography variant="h5" color="primary">
+                Linked Accounts
+              </Typography>
+              <Typography variant="caption">
+                (Click on the Account to view details.)
+              </Typography>
+            </ListItemText>
+          </ListItem>
           <Divider />
-          <List>
-            {/* use array map here */}
-            {["Tom Cruise", "Tony Stark", "Thor Odinson"].map((text) => (
+          {["Tony Stark", "Thor Odinson", "Thanos ", "Nick Fury"].map(
+            (text, index) => (
               <ListItem button key={text}>
                 <ListItemText primary={text} />
-                <FullScreenDialog
-                  name="Tom Cruise"
-                  address={`Address : ${this.props.address}`}
-                />
               </ListItem>
-            ))}
-          </List>
-          <Divider />
+            )
+          )}
+        </List>
+      </div>
+    );
+
+    return (
+      <div>
+        <Button
+          style={{ color: "#009688" }}
+          onClick={this.toggleDrawer("right", true)}
+        >
+          View Linked Accounts
+        </Button>
+
+        <Drawer
+          anchor="right"
+          open={this.state.right}
+          onClose={this.toggleDrawer("right", false)}
+        >
+          <div
+            tabIndex={0}
+            role="button"
+            onClick={this.toggleDrawer("right", false)}
+            onKeyDown={this.toggleDrawer("right", false)}
+          >
+            {sideList}
+          </div>
         </Drawer>
       </div>
     );
   }
 }
 
-export default DrawerRHS;
+DrawerRHS.propTypes = {
+  classes: PropTypes.object.isRequired
+};
+
+export default withStyles(styles)(DrawerRHS);
