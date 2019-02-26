@@ -15,6 +15,7 @@ import LandingPage from "./Trials/LandingPage";
 import ViewProfile from "./Trials/ViewProfile";
 import HoverPop from "./Trials/HoverPop";
 import TransferOwnership from "./Trials/TransferOwnership";
+import SimpleTransferOwnership from "./Trials/SimpleTransferOwnership";
 
 class App extends Component {
   constructor(props) {
@@ -24,24 +25,9 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        {/* <ClippedDrawer /> */}
-        {/* <DashboardC /> */}
-        {/* <RequestCard /> */}
-        {/* <MyProfile /> */}
-        {/* <PendingApproval /> */}
-        {/* <MyDocuments /> */}
-        {/* <MyRequests /> */}
-        {/* <InstDashboard /> */}
-        {/* <DrawerRHS /> */}
-        {/* <TopNav /> */}
         {/* <Sample /> */}
-        {/* <SearchResults /> */}
-        {/* <RequestCard /> */}
-        {/* <LandingPage /> */}
-        {/* <ViewProfile /> */}
+        <ViewProfile />
         {/* <HoverPop /> */}
-        {/* <MyDocuments /> */}
-        <TransferOwnership />
       </div>
     );
   }

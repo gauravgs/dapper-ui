@@ -90,43 +90,6 @@ class ViewProfile extends React.Component {
                     onMouseLeave={this.handlePopoverClose}
                   />
                 </IconButton>
-                <Popover
-                  id="mouse-over-popover"
-                  className={classes.popover}
-                  classes={{
-                    paper: classes.paper
-                  }}
-                  open={open}
-                  anchorEl={anchorEl}
-                  anchorOrigin={{
-                    vertical: "bottom",
-                    horizontal: "left"
-                  }}
-                  transformOrigin={{
-                    vertical: "top",
-                    horizontal: "left"
-                  }}
-                  onClose={this.handlePopoverClose}
-                  disableRestoreFocus
-                >
-                  <Typography>I use Popover.</Typography>
-                </Popover>
-                {/* <Menu
-                  id="menu-appbar"
-                  anchorEl={anchorEl}
-                  anchorOrigin={{
-                    vertical: "top",
-                    horizontal: "right"
-                  }}
-                  transformOrigin={{
-                    vertical: "top",
-                    horizontal: "right"
-                  }}
-                  open={open}
-                  onClose={this.handleClose}
-                >
-                  <MenuItem onClick={this.handleClose}>Log Out</MenuItem>
-                </Menu> */}
               </div>
             )}
           </Toolbar>
